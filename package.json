@@ -1,15 +1,16 @@
+
 {
   "name": "server",
   "version": "1.0.0",
   "main": "src/database/server.js",
   "scripts": {
     "start": "node src/database/server.js",
-    "dev": "nodemon src/database/server.js"
+    "dev": "nodemon src/database/server.js",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "node prisma/seed.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.1",
     "@prisma/client": "^7.10.1",
@@ -23,6 +24,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
-   
   }
 }
