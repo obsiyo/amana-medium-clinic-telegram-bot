@@ -23,7 +23,11 @@ async function main() {
     where: {
       id: 1
     },
-    update: {},
+    update: {
+      name: "General Medicine",
+      description: "General medical consultation",
+      price: 500
+    },
     create: {
       name: "General Medicine",
       description: "General medical consultation",
