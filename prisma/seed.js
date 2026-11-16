@@ -191,8 +191,9 @@ async function main() {
 
 main()
   .catch((error) => {
+    console.error("❌ Database seeding failed:");
     console.error(error);
-    process.exit(1);
+    process.exitCode = 1;
   })
   .finally(async () => {
     await prisma.$disconnect();
